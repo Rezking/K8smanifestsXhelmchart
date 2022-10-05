@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  flaskapp-service
+spec:
+  selector:
+    app:  web
+  type:  NodePort
+  ports:
+  - name:  testapp
+    port:  80
+    targetPort:  5000
